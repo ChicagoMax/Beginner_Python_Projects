@@ -19,36 +19,42 @@ def divide(a,b):
     answer = a / b
     print(str(a) + " / " + str(b) + " = " + str(answer))
 
-print("A. Add")
-print('B. Subtract')
-print("C. Multipy")
-print("D. Divide")
-print('E. Exit')
+while True:
+    print("A. Add")
+    print('B. Subtract')
+    print("C. Multipy")
+    print("D. Divide")
+    print('E. Exit')
 
-choice = input("What would you like to do? ")
+    choice = input("What would you like to do? Please input a single letter without the period. ")
 
-if choice == ('a') or choice ==('A'):
-    print("Addition")
-    a = int(input("what is your first number? "))
-    b = int(input("What is your second number? "))
-    add(a,b)
+    if choice == ('a') or choice ==('A'):
+        print("Addition")
+        a = int(input("what is your first number? "))
+        b = int(input("What is your second number? "))
+        add(a,b)
+        
+    elif choice == ('b') or choice == ('B'):
+        print("B: subtraction")
+        a = int(input("what is your first number? "))
+        b = int(input("What is your second number? "))
+        subtract(a,b)
+
+    elif choice == ('c') or choice == ('C'):
+        print("C: Multiply")
+        a = int(input("what is your first number? "))
+        b = int(input("What is your second number? "))
+        multiply(a,b)
+
+    elif choice == ('d') or choice == ('D'):
+        print("D: divide")
+        a = int(input("what is your first number? "))
+        b = int(input("What is your second number? "))
+        divide(a,b)
+
+
+    elif choice == ('e') or choice == ('E'):
+        print("Quit Program")
+        quit()
     
-elif choice == ('b') or choice == ('B'):
-    print("B: subtraction")
-    a = int(input("what is your first number? "))
-    b = int(input("What is your second number? "))
-    subtract(a,b)
-
-elif choice == ('c') or choice == ('C'):
-    print("C: Multiply")
-    a = int(input("what is your first number? "))
-    b = int(input("What is your second number? "))
-    multiply(a,b)
-
-elif choice == ('d') or choice == ('D'):
-    print("D: divide")
-    a = int(input("what is your first number? "))
-    b = int(input("What is your second number? "))
-    divide(a,b)
-
 
